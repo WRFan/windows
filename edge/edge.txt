@@ -1,0 +1,1220 @@
+//############################################################################# Edge Chromium
+https://www.microsoftedgeinsider.com/de-de/download
+https://www.microsoft.com/de-de/edge
+https://techcommunity.microsoft.com/t5/discussions/edge-dev-installing-to-incorrect-directory/m-p/803950
+https://techcommunity.microsoft.com/t5/discussions/x64-edge-stable-installs-in-c-program-files-x86-microsoft-edge/m-p/1112572
+
+https://www.microsoft.com/de-de/edge/business/download
+policy definitions
+
+https://docs.microsoft.com/en-us/microsoft-edge
+
+http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/
+91.0.837.0
+
+%localappdata%\microsoft\edgeupdate\install
+%localappdata%\microsoft\edgeupdate\download
+Download Directory
+
+edge://version
+New:
+microsoftedge_x64_115.0.1851.0
+
+Newest:
+microsoftedge_x64_115.0.1852.0
+
+//-----------------------------------------------------------------------------
+https://msedge.api.cdp.microsoft.com/api/v1.1/contents/Browser/namespaces/Default/names/msedge-canary-win-x64/versions/latest?action=select
+
+https://docs.microsoft.com/en-us/deployedge/microsoft-edge-security-endpoints
+
+c:\programdata\microsoft\edgeupdate\log\microsoftedgeupdate.log
+
+"c:\program files (x86)\microsoft\edge\application\84.0.522.52\installer\setup.exe" --uninstall --system-level --verbose-logging
+
+"c:\users\administrator\appdata\local\microsoft\edge\application\91.0.837.0\installer\setup.exe" --msedge --register-package-identity --verbose-logging
+
+//-----------------------------------------------------------------------------
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+HKLM\SOFTWARE\Policies\Microsoft\EdgeUpdate
+
+HKCU\SOFTWARE\Microsoft\Edge
+
+//----------------------------------------------------------------------------- ???
+%programfiles%\microsoft\edge
+%programfiles%\microsoft\edgeupdater
+%localappdata%\microsoft\edge
+
+//############################################################################# Install
+Import:
+HKLM\SOFTWARE\Policies
+
+regsym "HKU\S-1-5-21-4030081348-3639249424-442894499-500\SOFTWARE\Microsoft\edge" "HKU\zzz"
+
+policy definitions
+
+//----------------------------------------------------------------------------- Virtual
+Fix Fiddler proxy
+Fix Favorites
+hosts
+
+//#############################################################################
+taskkill /f /im msedge.exe
+
+pskill msedge.exe
+
+//############################################################################# policies
+edge://policy
+
+https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies
+https://github.com/MicrosoftDocs/Edge-Enterprise/blob/public/edgeenterprise/microsoft-edge-policies.md
+
+https://learn.microsoft.com/en-us/deployedge/microsoft-edge-enterprise-privacy-settings
+
+https://learn.microsoft.com/en-gb/deployedge/edge-learnmore-configurable-edge-commands
+https://support.microsoft.com/en-gb/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad
+shortcuts disable
+
+https://admx.help/?Category=EdgeChromium
+
+"XXX" site:admx.help
+
+https://learn.microsoft.com/en-gb/DeployEdge/edge-learnmore-create-user-directory-vars
+Policies special paths
+
+//----------------------------------------------------------------------------- ???
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	CloudManagementEnrollmentToken
+	CloudManagementEnrollmentMandatory
+
+HKLM\SOFTWARE\Policies\Microsoft\EdgeUpdate
+	AutoUpdateCheckPeriodMinutes
+
+//############################################################################# switches
+https://peter.sh/experiments/chromium-command-line-switches
+
+https://source.chromium.org/chromium/chromium/src/+/main:chrome/common/chrome_switches.cc
+
+//############################################################################# features ???
+https://niek.github.io/chrome-features/
+
+https://raw.githubusercontent.com/cezaraugusto/chromium-edge-launcher/main/docs/edge-flags-for-tools.md
+
+https://source.chromium.org/chromium/chromium/src/+/main:chrome/common/chrome_features.cc
+https://source.chromium.org/chromium/chromium/src/+/main:content/public/common/content_features.cc
+https://chromium.googlesource.com/chromium/src/+/master/chrome/browser/ui/ui_features.cc
+
+"XXX" site:source.chromium.org
+
+"XXX" site:chromium.googlesource.com
+
+//############################################################################# history release notes
+https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-beta-channel
+
+//############################################################################# github
+https://github.com/MicrosoftEdge/DevTools/
+
+//-----------------------------------------------------------------------------
+https://github.com/MicrosoftEdge/DevTools/issues/152
+
+//############################################################################# KILL
+https://devtools.azureedge.net/docs/115/stable.json
+
+devtoolsfrontendstorage
+
+called here:
+devtools://devtools/bundled/panels/welcome/welcome.js
+
+resource -> 60741
+
+	pak_index.ini -> point 60741 to: "welcome.js"
+
+//----------------------------------------------------------------------------- devtools
+https://microsoftedge.github.io/edgevr/posts/attacking-the-devtools/
+
+devtools://devtools/bundled/devtools_app.html
+devtools://devtools/bundled/devtools_app.html?uiDevTools=false
+
+devtools://devtools/bundled/inspector.html
+
+edge://inspect
+
+//############################################################################# KILL
+https://devtools.azureedge.net/serve_file/@d182ed791e29fd7be1866c3c8e17e6a27cf0b52e/third_party/webhint/worker_frame.html
+
+devtools.azureedge.net/serve_file/@d182ed791e29fd7be1866c3c8e17e6a27cf0b52e/third_party/network-console/dist/index.html
+
+	kills this -> Bearbeiten und erneut senden im Netzwerk!
+
+https://devtools.azureedge.net/serve_file/@31962ca1eff05d519ed4b5cffe576650f1175cc7/third_party/network-console/dist/index.html
+
+msedge.dll -> d9a16f0
+
+//----------------------------------------------------------------------------- ???
+chrome://devtools/devtools.html
+edge://devtools/devtools.html
+
+devtools://devtools/bundled/third_party/webhint/worker_frame.html
+devtools://devtools/bundled/third_party/network-console/dist/index.html
+
+//############################################################################# FeatureControl Missing
+\FeatureControl\
+\Internet Settings\
+
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\RETRY_HEADERONLYPOST_ONCONNECTIONRESET
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_IGNORE_MAPPINGS_FOR_CREDPOLICY
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_INCLUDE_PORT_IN_SPN_KB908209
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BUFFERBREAKING_818408
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SKIP_POST_RETRY_ON_INTERNETWRITEFILE_KB895954
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SKIP_POST_RETRY_ON_INTERNETWRITEFILE_KB895954
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_FIX_CHUNKED_PROXY_SCRIPT_DOWNLOAD_KB843289
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_USE_CNAME_FOR_SPN_KB911149
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_PERMIT_CACHE_FOR_AUTHENTICATED_FTP_KB910274
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISALLOW_NULL_IN_RESPONSE_HEADERS
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DIGEST_NO_EXTRAS_IN_URI
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ENABLE_PASSPORT_SESSION_STORE_KB948608
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_EXCLUDE_INVALID_CLIENT_CERT_KB929477
+KLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_USE_UTF8_FOR_BASIC_AUTH_KB967545
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_PRESERVE_SPACES_IN_FILENAMES_KB952730
+
+//############################################################################# Plastischer Reader -> Immersive Reader
+-disable-features=msEdgeReadingView
+
+edge://flags
+	edge-reading-view
+
+//############################################################################# Global music controller crash
+https://chromium.googlesource.com/chromium/src/+/HEAD/docs/media/media_router.md
+
+EnableMediaRouter -> must be ON in the policies
+
+disable:
+
+-disable-features=GlobalMediaControls
+
+//############################################################################# passwords page will not be displayed if set
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	PrimaryPasswordSetting
+
+//############################################################################# KILL pin
+c:\program files\msedge._pin_opmibappcfjmcco.cache.default3924_1120470397
+
+search for:
+
+	_pin_
+
+overwrite any letter by "?"
+
+	msedge.dll -> d320d56
+
+if not overwritten, following directory is created:
+
+%programfiles%\edge\cache\default\pinned sites
+
+//############################################################################# KILL compat !!!
+edge://compat <- do NOT execute !!!
+
+key created:
+HKCU\SOFTWARE\Microsoft\Internet Explorer\EdgeIntegration
+
+also check:
+HKLM\SOFTWARE\Microsoft\Internet Explorer\EdgeIntegration
+	Supported -> 0
+
++
+
+delete the subkey:
+
+HKLM\SOFTWARE\Microsoft\Internet Explorer\EdgeIntegration\AdapterLocations
+
+//----------------------------------------------------------------------------- ???
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	EnterpriseModeSiteListManagerAllowed
+
+//############################################################################# KILL
+%localappdata%\microsoft\edge\user data
+
+won't be created if Edge is started with this flag (policy won't help):
+
+	--user-data-dir=%programfiles%\edge\cache
+
+//-----------------------------------------------------------------------------
+won't be created, if the following flag is NOT set (although, may depend on GPU):
+
+	Microsoft Video Super Resolution
+	edge-video-super-resolution
+
+//----------------------------------------------------------------------------- CRAP
+Edge (part of the path):
+msedge.dll -> d3e102c
+
+if any letter is replaced by "?":
+
+will also write to the following key !!!:
+
+HKCU\SOFTWARE\Microsoft\?dge
+
+HKCU\SOFTWARE\Microsoft\Edge\IEToEdge
+
+	msedge.dll -> d709980
+
+HKCU\SOFTWARE\Microsoft\Edge\BLBeacon
+
+	msedge_elf.dll -> 2b4544 (crashes, however, if changed !!!)
+
+	\BLBeacon
+		msedge_elf.dll -> 29f1f2 <- KILL
+
+		state
+			msedge_elf.dll -> 29f204
+
+//----------------------------------------------------------------------------- KILL
+User Data (part of the path):
+
+msedge.dll -> d82ee60
+
+//############################################################################# KILL -> dictionary URL
+https://edge.microsoft.com/redirectordictionaries/dict/ru-ru-3-0.bdic
+
+%programfiles%\edge\dictionaries
+
+	ru-RU-3-0.bdic
+
+//############################################################################# KILL
+https://edge.microsoft.com/serviceexperimentation/v3/?clientversion=115.0.1851.0&experimentationmode=2
+
+This policy is disabled, but the fuckers are still communicating!:
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	ExperimentationAndConfigurationServiceControl
+
+//############################################################################# devtools selected text not visible
+Disable both in edge://flags + start flags:
+
+-enable-experimental-web-platform-features
+
+//############################################################################# MediaFoundation -> video not player properly
+edge://flags
+	enable-media-foundation-clear -> disable
+
+//############################################################################# Zwischenablage clipboard policies
+Wenn Zwischenablage über die policies gesteuert wird:
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	DefaultClipboardSetting
+
+müssen auch die erlaubten URLs in der Registry festgelegt sein:
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	ClipboardAllowedForUrls
+
+//############################################################################# free space
+delete contents:
+
+%programfiles%\edge\cache\grshadercache\gpucache
+%programfiles%\edge\cache\default\extension state
+%programfiles%\edge\cache\default\service worker
+%programfiles%\edge\cache\default\storage
+
+//----------------------------------------------------------------------------- local storage
+%programfiles%\edge\cache\default\indexeddb
+
+//----------------------------------------------------------------------------- Verlauf
+%programfiles%\edge\cache\default\webassistdatabase
+%programfiles%\edge\cache\default\webassistdatabase-journal
+
+*.bak
+*.msbak
+*.old
+
+Empty Verlauf
+
+//----------------------------------------------------------------------------- ???
+load_statistics.db
+
+//############################################################################# save as -> invalid junction
+%appdata%\microsoft\internet explorer\quick launch
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	PromptForDownloadLocation -> must be 0 for certain downloads !!!
+
+for the policy, the directory must be literal (no %appdata%)
+
+//-----------------------------------------------------------------------------
+To disable the download button appearing still:
+
+	-disable-features=msDownloadsHub
+
+However, this will display a Chrome download bar instead at the bottom of the screen. Removed using this:
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
+
+https://chrome.google.com/webstore/detail/disable-download-bar/gjdldigdojpjlmphnogmcmhojfadfmem
+
+############################################################################### convert 8.3 short name
+for %A in ("XXX") do @echo %~sA
+
+//############################################################################# KILL
+HKCU\Software\Microsoft\EdgeUpdate\ClientState\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+
+	msedge.dll -> XXX -> 99e01fc -> 9c64e16 -> b498c4c -> db088f8
+
+	msedge.exe -> XXX -> 2605b0 -> 262a10 -> 296ed0 -> 2b2e6c
+
+search for:
+Software\Microsoft\EdgeUpdate\ClientState\
+
+replace by:
+
+Software\Microsoft\Edge\
+
+//############################################################################# KILL
+HKCU\SOFTWARE\Microsoft\EdgeUpdate\Clients\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}\Commands\on-logon-autolaunch
+
+msedge.dll -> b498bfe -> db088aa
+
+search for:
+SOFTWARE\Microsoft\EdgeUpdate\Clients\
+
+replace by:
+Software\Microsoft\Edge\
+
+//############################################################################# KILL
+HKLM\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\ClientStateMedium\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+
+	msedge.dll -> XXX -> 99e0252 -> 9c64e3e -> b498ca2 -> db0894e
+
+search for:
+SOFTWARE\Microsoft\EdgeUpdate\ClientStateMedium\
+
+replace by:
+SOFTWARE\policies\Microsoft\Edge\
+
+//############################################################################# KILL
+HKLM\SOFTWARE\WOW6432Node\Microsoft\Edge\Extensions
+
+	msedge.dll -> XXX -> 9d7be10 -> 9ff35a0 -> b7f88d0 -> e02acf0
+
+search for:
+SOFTWARE\Microsoft\Edge\Extensions
+
+delete
+
+//############################################################################# KILL
+HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds\MUID
+
+	msedge.dll -> XXX -> 9f06960 -> 0a15dd60 -> b729040 -> d6eff30
+
+search for:
+SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds
+
+replace by:
+SOFTWARE\Microsoft\edge
+
+//----------------------------------------------------------------------------- ???
+HKLM\Software\WOW6432Node\Microsoft\EdgeUpdate\Clients\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+
+	msedge_elf.dll -> XXX -> 109ca2 -> XXX
+
+//----------------------------------------------------------------------------- ???
+HKCU\SOFTWARE\Microsoft\Edge Dev
+
+//############################################################################# UserDataDir
+https://www.chromium.org/administrators/policy-list-3/user-data-directory-variables
+
+//#############################################################################
+"%programfiles%\microsoft\edge\msedge.exe" --do-not-de-elevate --single-argument %1
+
+//----------------------------------------------------------------------------- ???
+c:\windows\system32\comppkgsrv.exe
+
+Component Package Support Server
+
+//############################################################################# internal urls
+edge://about
+chrome://about
+
+edge://newtab
+chrome://newtab
+
+edge://settings
+edge://settings/passwords
+
+edge://extensions
+edge://policy
+
+edge://flags
+about:flags
+
+edge://settings/passwords
+
+edge://version
+about:
+
+edge://gpu
+
+edge://crash
+
+about:blank
+
+edge://surf
+
+//#############################################################################
+https://chromium.googlesource.com/chromium/src/+/master/content/public/common/content_switches.cc
+
+https://superuser.com/questions/697567
+
+//----------------------------------------------------------------------------- slowdown Virtual
+GPU rasterization
+Smooth Scrolling
+
+???
+Accelerated 2D canvas
+
+//-----------------------------------------------------------------------------
+Blocked a frame with origin "null" from accessing a cross-origin frame.
+
+	-allow-file-access-from-files
+
+//-----------------------------------------------------------------------------
+You are using an unsupported command
+
+	-test-type
+
+//----------------------------------------------------------------------------- CRASH !!!
+"%programfiles%\edge\msedge.exe" -single-process
+
+//-----------------------------------------------------------------------------
+-enable-automation
+
+is being controlled by automated test software
+
+//-----------------------------------------------------------------------------
+-unsafely-treat-insecure-origin-as-secure
+
+-utility-cmd-prefix
+
+-proxy-server=
+
+-site-per-process
+-process-per-tab
+
+-log-level
+	0 bis 3
+
+-enable-viewport
+
+-disable-smooth-scrolling
+
+ -disable-permissions-api
+
+-allow-loopback-in-peer-connection
+
+-allow-sync-xhr-in-page-dimissal
+
+-crash-test
+
+-browser-startup-dialog
+
+-disable-canvas-aa
+
+-disable-2d-canvas-image-chromium
+
+-disable-accelerated-2d-canvas
+
+-disable-accelerated-video-encode
+
+-disable-3d-apis
+
+//----------------------------------------------------------------------------- ???
+"%programfiles%\edge\msedge.exe" --type=renderer --disable-touch-drag-drop --enable-experimental-web-platform-features --enable-webgl-draft-extensions --test-type --field-trial-handle=1784,3213201329791250211,11800986496460842294,131072 --enable-features=blockinsecureprivatenetworkrequests,cookiedeprecationmessages,criticalclienthint,crossoriginisolated,crossoriginopenerpolicyaccessreporting,crossoriginopenerpolicyreporting,documentpolicynegotiation,enablenewcanvas2dapi,featurepolicyforclienthints,langclienthintheader,originisolationheader,originpolicy,paralleldownloading,rawclipboard,schemefulsamesite,useragentclienthint,v8vmfuture,webassemblybaseline,webassemblylazycompilation,webassemblysimd,webassemblythreads,webassemblytiering,webrtcenablecapturemultichannelapm,msbackspacekeynavigatepageback,msplayreadywin10 --disable-features=autofillshowtypepredictions,omniboxdynamicmaxautocomplete,omniboxpedalsuggestions,omniboxrichautocompletion,omniboxshortbookmarksuggestions,omniboxsuggestionbuttonrow,omniboxtabswitchsuggestions,omniboxuiexperimentmaxautocompletematches,overscrollhistorynavigation,msclickonceflag,msedgefrespartanimportallowed,mslogtextfieldlag,msmsbforalldefaultsearchengines,msomniboxmsbkeyword,mspushwinrt --lang=de --disable-client-side-phishing-detection --extensions-on-edge-urls --allow-insecure-localhost --javascript-harmony --enable-experimental-webassembly-features --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=7 --mojo-platform-channel-handle=3192 /prefetch:1
+
+//############################################################################# Permissions
+https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html
+
+//-----------------------------------------------------------------------------
+edge://settings/content/siteDetails
+
+"clipboard":
+{
+	"file:///*":
+	{
+		"expiration": "0",
+		"last_modified": "13260848089727276",
+		"model": 0,
+		"setting": 1
+	}
+},
+
+//-----------------------------------------------------------------------------
+http://local.ptron/Test/Test.html
+
+Not allowed to load local resource: file:///C:/Program Files/Internet/Proxydomo/html/Homepage/functions.js
+
+//----------------------------------------------------------------------------- Navigator.clipboard http
+
+
+//-----------------------------------------------------------------------------
+https://stackoverflow.com/questions/56306153
+
+Uncaught (in promise) DOMException: Document is not focused.
+
+.focus()
+
+//############################################################################# restore tabs KILL
+cache\default\preferences
+
+"exit_type": "Crashed"
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	HideRestoreDialogEnabled -> 1
+
+//----------------------------------------------------------------------------- doesn't work any longer
+	msedge.dll -> 92c4b03 -> 9a90443 -> 9d17a0d -> b532e1b -> d7e0024
+
+	change any letter
+
+//----------------------------------------------------------------------------- ???
+"exit_type": "SessionEnded"
+
+	msedge.dll -> b532e0e
+
+???
+"exited_cleanly":
+
+//############################################################################# ntp.msn.com KILL
+https://ntp.msn.com/edge/ntp?locale=de-de&title=Neuer Tab&fre=1&dsp=0&sp=Google
+https://ntp.msn.com/edge/ntp
+
+	msedge.dll -> 09156810 -> 991e210 -> 9ba2010 -> b3a1e00 -> d9a1900
+
+chrome-search://local-ntp/local-ntp.html
+
+	msedge.dll -> 09040290 -> 98060c0 -> 9aa36b0 -> b27bc60 -> d9a1940
+
+//############################################################################# KILL
+Also check for F1:
+
+msedge.dll
+https://go.microsoft.com/fwlink/?linkid=2049807
+	file:///c:/program files/edge/////homepage.html
+
++
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	CustomHelpLink
+
+Hilfe menu Help:
+https://go.microsoft.com/fwlink/?linkid=2047734
+
+Hilfe menu Neuigkeiten:
+https://go.microsoft.com/fwlink/?linkid=2080386
+
+//----------------------------------------------------------------------------- ???
+fsutil hardlink create "%programfiles%\edge\homepage.html" "%programfiles%\internet\proxydomo\html\homepage\homepage.html"
+
+edge://newtab
+	msedge.dll -> 0903e624 -> 9804481 -> 9aa1cf1
+
+//----------------------------------------------------------------------------- ???
+resources.pak
+
+<!doctype html><html lang="de"><head><meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none'; base-uri 'none';"><script src="chrome-search://local-ntp/config.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="referrer" content="strict-origin"></head><body><div id="root"></div><script src="bundle.js"></script></body></html>
+
+Not allowed to load local resource
+
+mklink "%programfiles%\edge\home.html" "%programfiles%\internet\proxydomo\html\homepage\homepage.html"
+
+file:///c:/program files/edge/homepage.html
+c:\progra~1\internet\proxyd~1\html\homepage\homepa~1.htm
+
+//----------------------------------------------------------------------------- Compression ???
+chrome://newtab -> edge://newtab -> chrome-search://local-ntp/local-ntp.html -> 24084
+									bundle.js -> 24085
+
+									background image -> resource 24241 ???
+
+Compression first two bytes header:
+1E 9B
+
+//############################################################################# KILL
+config.edge.skype.com
+
+msedge.dll
+
+//############################################################################# KILL
+edge.microsoft.com/componentupdater/api/v1/update
+
+msedge.dll
+
+//############################################################################# KILL
+edge.microsoft.com/extensioninstallverifier/v1.1/installverify
+
+msedge.dll
+
+//############################################################################# KILL
+edge.microsoft.com/entityextractiontemplates/api/v2/supportedDomains?key=d414dd4f9db345fa8003e32adc81b362
+
+edge.microsoft.com/entityextractiontemplates/api/v1/config?key=d414dd4f9db345fa8003e32adc81b362
+
+msedge.dll
+
+//############################################################################# KILL
+edge.microsoft.com/extensionwebstorebase/v1/logextensionreliability?success=false&cv=&errorString=MANIFEST_FETCH_FAILED&crxId=milebhdgmnpkhodhblfmgeeadncpnimi&os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=edgecrx&prodchannel=&prodversion=91.0.825.0&lang=de&acceptformat=crx3
+
+msedge.dll
+
+//############################################################################# KILL
+edge.microsoft.com/abusiveadblocking/api/v1/blocklist
+
+msedge.dll
+
+//############################################################################# NEEDED
+edge.microsoft.com/extensionwebstorebase/v1/crx?os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=edgecrx&prodchannel=&prodversion=91.0.825.0&lang=de&acceptformat=crx3&x=id=milebhdgmnpkhodhblfmgeeadncpnimi&v=3.2.0&installedby=internal&uc&ping=r=-1&e=1
+
+edge.microsoft.com/extensionwebstorebase/v1/crx?os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=chromiumcrx&prodchannel=&prodversion=91.0.825.0&lang=de&acceptformat=crx3&x=id=milebhdgmnpkhodhblfmgeeadncpnimi&v=3.2.0&installsource=notfromwebstore&installedby=internal&uc
+
+edge.microsoft.com/extensionwebstorebase/v1/crx?os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=edgecrx&prodchannel=&prodversion=91.0.825.0&lang=de&acceptformat=crx3&x=id=milebhdgmnpkhodhblfmgeeadncpnimi&v=3.2.0&installedby=external&uc
+
+edge.microsoft.com/extensionwebstorebase/v1/crx?os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=edgecrx&prodchannel=&prodversion=115.0.1851.0&lang=de&acceptformat=crx3&x=id=jmjflgjpcpepeafmmgdpfkogkghcpiha&v=1.1.3&installedby=other&uc&x=id=kfbdpdaobnofkbopebjglnaadopfikhh&v=113.0.1765.0&installedby=other&uc
+
+//----------------------------------------------------------------------------- NEEDED Proxydomo
+/extensionwebstorebase/v1/crx?response=redirect&os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=chromiumcrx&prodchannel=&prodversion=91.0.825.0&lang=de&acceptformat=crx3&x=id=milebhdgmnpkhodhblfmgeeadncpnimi&installsource=ondemand&uc
+
+//############################################################################# KILL
+arc.msn.com/v4/api/selection?placement=88000437&nct=1&fmt=json&ADEFAB=0&OPSYS=WIN10&locale=de&country=DE&edgeid=8a88214e-6471-4633-ac01-4443c7fb2378&ACHANNEL=0&ABUILD=91.0.4435.0&poptin=0&devosver=10.0.19042.804&clr=esdk&UITHEME=light&SYNCSTATUS=0&ISSIGNEDIN=0
+
+msedge.dll -> a265bd0
+
+//############################################################################# search Adressenleiste (omnibox) + suggestion KILL
+chrome://omnibox/
+
+//-----------------------------------------------------------------------------
+www.google.com/search?q=h&oq=h&aqs=edge..69i57.448j0j7&sourceid=chrome&ie=UTF-8
+
+msedge.dll -> 91542c0 -> 991bce0 -> 9b9fb20 -> b39c2a0 -> d8304d0
+
++
+
+google als Hauptsuchmaschine auswählen!
+
+oder fake url kreieren und als Hauptsuchmaschine setzen!
+
+//----------------------------------------------------------------------------- Adressenleiste dropdown when url inserted
+https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains
+
+https://source.chromium.org/chromium/chromium/src/+/main:docs/idn.md
+https://chromium.googlesource.com/chromium/src/+/main/docs/idn.md
+omnibox domains site:source.chromium.org
+
+bla.clothing
+
+???
+%programfiles%\edge\cache\default\entityextraction
+
+//############################################################################# STRG + E shortcut + search engine (google.com)
+msedge.dll -> d0965d6
+
+delete the entire string ("google.com") to kill the dropdown menu when shortcut is pressed
+
+//############################################################################# autocomplete in inputs
+Web Data
+
+msedge.dll -> 9762a80 -> 9f5d4e0 -> 9a98200 -> b25e030 -> d7f5df0
+
+//############################################################################# KILL
+https://www.googleapis.com/chromewebstore/v1.1/items/verify
+
+msedge.dll -> 95907b0 -> XXX -> 9ff6e00
+
+//############################################################################# KILL
+edge.microsoft.com/autofillservice/v1/pages/ChJDaHJvbWUvOTEuMC40NDM1LjASFwl--R7-ScomehIFDQiEZ_ESBQ0KeNCa?alt=proto
+
+msedge.dll
+
+search for "autofillservice"
+
+//############################################################################# KILL
+Crashpad
+CrashpadMetrics-active.pma
+
+msedge_elf.dll -> ef332 -> 10b822 -> 1106f2 -> 110c62 -> 2aab62
+
+//############################################################################# KILL
+BrowserMetrics
+
+msedge.dll -> 94ab2f6 -> 9c7bee2 -> 9ee5179 -> b73663f -> d9c5247
+
+//############################################################################# favicons KILL
+%programfiles%\edge\cache\default\Favicons
+
+msedge.dll -> 9541210 -> 9d2e810 -> 97905c0 -> aef92f0 -> d4c1c80
+
+//############################################################################# KILL
+https://msedge.api.cdp.microsoft.com/api/v1.1/
+
+msedge.dll -> 8d66d30 -> 951ae00 -> 97b82b0 -> af1d5f0
+
+//############################################################################# KILL
+update.googleapis.com/service/update2/json?cup2key
+
+msedge.dll
+
+//############################################################################# KILL ???
+api.cognitive.microsofttranslator.com
+
+learning_tools.dll
+
+//############################################################################# KILL Randleiste Personalisierung
+https://edge.microsoft.com/taggrouptitlegeneration/api/shoreline/apps/market_topsites
+Personalisierung Randleiste
+
+search for:
+
+edge.microsoft.com/taggrouptitlegeneration/api/shoreline/apps
+
+//############################################################################# KILL Seitenleiste
+edge://settings/sidebar
+
+disable:
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	DefaultSearchProviderContextMenuAccessAllowed -> 0
+
+//----------------------------------------------------------------------------- ???
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+
+	HubsSidebarEnabled
+	StandaloneHubsSidebarEnabled
+	SearchInSidebarEnabled
+	WebWidgetAllowed
+
+//############################################################################# Homepage
+https://edgeservices.bing.com/EdgeSvc/searchreco?q=&FORM=ZIQUIC&title=Homepage&lightschemeovr=1
+
+search for:
+https://edgeservices.bing.com/EdgeSvc/searchreco?q=
+
+replace by:
+c:\program files\edge\\\\\\\\\\\\\\\\\homepage.html
+
+msedge.dll -> dae07e0
+
+//############################################################################# Search website
+https://edgeservices.bing.com/edgediscover/comparative/query?spinss=1&q=
+https://edgeservices.bing.com/edgediscover/comparative/query?udschatsp=1&q=
+
+search for:
+https://edgeservices.bing.com/edgediscover/comparative/query
+
+//############################################################################# Search website (Im Hauptfenster öffnen)
+https://www.bing.com/search?q=XXX&FORM=ANCMS2&PC=U531&lightschemeovr=1
+
+//############################################################################# Search website (site:)
+https://www.google.de/search?q=site:bing.com+XXX&FORM=SSSITE
+
+site:
+msedge.dll -> dae07ba
+
+//-----------------------------------------------------------------------------
+Bing in der Seiten&leiste nach ...$1... durchsuchen
+
+de.pak -> 3b9be
+
+//----------------------------------------------------------------------------- outdated
+msedge.dll -> ad4e7d0
+
+search for:
+https://www.bing.com/
+
+replace by:
+https://google.de////
+
+//----------------------------------------------------------------------------- ???
+https://www.google.de/search?hl=en&nfpr=1&prmd=u&q=
+
+//############################################################################# KILL image search contextmenu
+
+//############################################################################# KILL -> Seitenleiste Webausschnitt visuelle suche
+https://www.bing.com/images/search?&view=detailv2&FORM=WCVSID&idpvc=single&idpp=edgerp&lightschemeovr=1&iss=sbiupload
+
+msedge.dll -> d6ff553
+
+Webaufnahme, nicht zu verwechseln mit Webauswahl
+
+edge://web-capture
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	WebCaptureEnabled -> 1 <- Webaufnahme
+
+	WebSelectEnabled -> 1 <- Webauswahl
+
+//############################################################################# KILL
+load_statistics.db
+
+msedge.dll -> af1b510
+
+//############################################################################# KILL -> download on start
+%programfiles%\edge\cache\default\extensions
+
+	msedge.dll -> d160d06
+
+https://edge.microsoft.com/extensionwebstorebase/v1/crx
+
+	msedge.dll -> da1d7d0
+
+	if extensions download is needed -> fix !!!
+
+https://edge.microsoft.com/extensionwebstorebase/v1/crx?os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=edgecrx&prodchannel=&prodversion=115.0.1851.0&lang=de&acceptformat=crx3&x=id=jmjflgjpcpepeafmmgdpfkogkghcpiha&v=0.0.0.0&installsource=reinstall&installedby=other&uc&x=id=kfbdpdaobnofkbopebjglnaadopfikhh&v=113.0.1765.0&installedby=other&uc
+
+https://edge.microsoft.com/extensionwebstorebase/v1/crx?response=redirect&x=uc%26installsource%3Dsignature%26id%3Dkfbdpdaobnofkbopebjglnaadopfikhh%26v%3D113.0.1765.0
+
+https://msedgeextensions.sf.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/61d37acd-3ee7-44dd-9596-c9c71a826541?P1=1684614264&P2=404&P3=2&P4=gZwKv0qn2yNREMWS861pgA+Su46Qvx0vyPC+ZZ19Xjp7HFJV6S9pY5ySaGDEDZoWRyBtZXoCG+zuehF1LMlD7g==
+
+https://msedgeextensions.sf.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/f86d8688-be59-4ce5-9f0b-4da16f12f4f5?P1=1684614264&P2=404&P3=2&P4=I8/F51UcRwHTSVpWYF2KlY5n9DVqHs5jUwcEb7PN0rWHyL3Gj49fGDFbWbLm9moI+9b0D2FU3kob+daLX47tSg==
+
+//----------------------------------------------------------------------------- clean edge extensions
+preferences
+secure preferences
+
+Edge relevant text changes
+Edge relevant text changes on select websites to improve user experience and precisely surfaces the action they want to take.
+jmjflgjpcpepeafmmgdpfkogkghcpiha
+
+Microsoft Edge DevTools Enhancements
+kfbdpdaobnofkbopebjglnaadopfikhh
+
+//----------------------------------------------------------------------------- ???
+resources.pak
+	54650.js
+
+junction "%programfiles%\edge\cache\default\extensions" "z:"
+
+//############################################################################# KILL
+https://business.bing.com/work/api/v2/tenant/my/settingswithflights?&clienttype=edge-omnibox
+https://business.bing.com/api/v1/user/token/microsoftgraph?&clienttype=edge-omnibox
+
+//############################################################################# Extensions
+https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options
+https://chrome.google.com/webstore/category/extensions?hl=de
+https://robwu.nl/crxviewer/crxviewer.html
+
+https://developer.chrome.com/docs/extensions/reference
+
+edge://extensions
+
+https://edge.microsoft.com/extensionwebstorebase/v1/crx
+https://clients2.google.com/service/update2/crx
+
+//############################################################################# Extensions download Chrome store
+Browser URL:
+https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe
+
+Download link (KEEP Escaped !!!):
+
+https://clients2.google.com/service/update2/crx?response=redirect&os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=chromiumcrx&prodchannel=&prodversion=115.0.1851.0&lang=de&acceptformat=crx3&x=id%3Dfjnbnpbmkenffdnngjfgmeleoegfcffe%26installsource%3Dondemand%26uc
+
+Short download link (KEEP Escaped !!!):
+https://clients2.google.com/service/update2/crx?response=redirect&x=id%3Dfjnbnpbmkenffdnngjfgmeleoegfcffe%26installsource%3Dondemand%26uc&prodversion=115.0.1851.0&acceptformat=crx3
+
+Redirect by server:
+https://clients2.googleusercontent.com/crx/blobs/Acy1k0afkhP-Sr0ovYLBdhnPCKXTwvWHOIN5OmFnvwdDA1PMuOJV_QYY4a-WKzQtSaXK0fszjwKCRF5E0isyQP0fc7BhwW8JyO_X26esLFLv8anCHKhrAMZSmuXtMxwf4hSfMsSM01g-zPogVeb89Q/extension_3_2_0_0.crx
+
+//############################################################################# Extensions download Edge store
+Browser URL:
+https://microsoftedge.microsoft.com/addons/detail/blank-tab/ihknoknoahjhldmpdoajjdkfjhddgpcd
+
+	Extension name -> ihknoknoahjhldmpdoajjdkfjhddgpcd
+
+		change below to
+
+Crap:
+https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/ihknoknoahjhldmpdoajjdkfjhddgpcd?hl=de-DE&gl=DE
+
+Download link (KEEP Escaped !!!):
+https://edge.microsoft.com/extensionwebstorebase/v1/crx?response=redirect&os=win&arch=x64&os_arch=x86_64&nacl_arch=x86-64&prod=chromiumcrx&prodchannel=&prodversion=115.0.1851.0&lang=de&acceptformat=crx3&x=id%3Dihknoknoahjhldmpdoajjdkfjhddgpcd%26installsource%3Dondemand%26uc
+
+Short download link (KEEP Escaped !!!):
+https://edge.microsoft.com/extensionwebstorebase/v1/crx?response=redirect&x=id%3Dihknoknoahjhldmpdoajjdkfjhddgpcd%26installsource%3Dondemand%26uc
+
+Redirect by server:
+https://msedgeextensions.sf.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/6f52ee5e-8175-40f9-9093-e70ee2075b7d?P1=1684621401&P2=404&P3=2&P4=HdJkTITllyOsa/fhtNj/Yu/uJY5naqSVCNXFs2zWxsWyFj9+oywvbPHGzjZ19M9BKeH3BcVbfi/K1nPbNcmEFA==
+
+//-----------------------------------------------------------------------------
+HKCU\SOFTWARE\Chromium\NativeMessagingHosts
+HKCU\SOFTWARE\Microsoft\Edge\NativeMessagingHosts
+
+//-----------------------------------------------------------------------------
+HKLM\Software\WOW6432Node\Microsoft\Edge\Extensions
+
+%programfiles%\edge\default_apps\external_extensions.json
+
+//############################################################################# clear cache
+https://microsoftedge.microsoft.com/addons?hl=de
+
+https://microsoftedge.microsoft.com/addons/detail/milebhdgmnpkhodhblfmgeeadncpnimi
+https://github.com/dessant/clear-browsing-data
+
+HKCU\SOFTWARE\Microsoft\Edge\PreferenceMACs\Default\extensions.settings\milebhdgmnpkhodhblfmgeeadncpnimi
+
+%programfiles%\edge\cache\default\extensions\milebhdgmnpkhodhblfmgeeadncpnimi\3.2.0_0
+
+//----------------------------------------------------------------------------- clear cache 2
+https://microsoftedge.microsoft.com/addons/detail/clear-history-web-cache/ojilnhojiihncgjnnpphppnmflflhbcg
+
+//############################################################################# proxy switcher
+https://microsoftedge.microsoft.com/addons/detail/gneeeeckemnjlgopgpchamgmfpkglgaj
+
+api.armin.dev/v1/contribute/goals/clear-browsing-data
+
+//----------------------------------------------------------------------------- ???
+https://microsoftedge.microsoft.com/addons/detail/new-tab-redirect/lcmffmdoeceoffjbihahaabfojodjmkf
+
+https://www.microsoft.com/store/p/hevc-video-extension/9n4wgh0z6vhq
+
+//############################################################################# External Application Button
+https://chrome.google.com/webstore/detail/external-application-butt/bifmfjgpgndemajpeeoiopbeilbaifdo?hl=de
+
+https://clients2.googleusercontent.com/crx/blobs/QgAAAC6zw0qH2DJtnXe8Z7rUJP2qYU8qLoGBWcvAi2mrj6RdeC0yUP-TFqP-vmv2ENRDyOWRUKGeH0c3WrOBDeWA2wTec4Km9yrPjuy_uoFfF-lWAMZSmuVEAVS8fLhSWCFHcWGsH8HFatYb3A/extension_0_4_1_0.crx
+
+https://github.com/andy-portmen/native-client/releases
+
+//############################################################################# Bugs
+https://bugs.chromium.org
+
+//############################################################################# policy definitions
+https://docs.keeper.io/enterprise-guide/deploying-keeper-to-end-users/keeper-fill/group-policy-deployment-edge
+
+%windir%\policydefinitions
+
+//############################################################################# User-Agent Client Hints
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User
+
+sec-ch-ua: " Not;A Brand";v="99", "Microsoft Edge";v="91", "Chromium";v="91"
+sec-ch-ua-mobile: ?0
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+
+//############################################################################# download blocking
+https://chromium.googlesource.com/chromium/src/+/27b277e8e7c73aba053015217eee60ed4fc030aa/chrome/browser/download/mixed_content_download_blocking.cc
+
+https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings
+https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter format
+
+ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+
+{"domains": ["*"], "file_extension": "exe"}
+
+//----------------------------------------------------------------------------- ???
+TreatSilentBlockListAsAllowlist
+SilentBlockExtensionList
+TreatBlockListAsAllowlist
+BlockExtensionList
+TreatWarnListAsAllowlist
+WarnExtensionList
+
+exe,scr,msi,vb,dmg,pkg,crx,gz,gzip,zip,bz2,rar,7z,tar
+
+https://www.7-zip.org/download.html
+https://cdn.jsdelivr.net/musescore/v3.6.2/MuseScore-3.6.2.548021803-x86_64.msi
+
+application/octet-stream
+
+//############################################################################# History duration
+browsing_history
+download_history
+cookies_and_other_site_data
+cached_images_and_files
+password_signin
+autofill
+site_settings
+hosted_app_data
+
+BrowsingDataLifetime:
+
+[{"data_types": ["browsing_history", "download_history", "cookies_and_other_site_data", "cached_images_and_files", "password_signin", "autofill", "site_settings", "hosted_app_data"], "time_to_live_in_hours": 8544}]
+
+{"data_types": ["browsing_history", "download_history", "cookies_and_other_site_data", "cached_images_and_files", "password_signin", "autofill", "site_settings", "hosted_app_data"], "time_to_live_in_hours": 8544}
+
+//############################################################################# IE Mode
+https://docs.microsoft.com/en-us/DeployEdge/edge-ie-mode#why-am-i-receiving-the-following-message-to-open-this-page-in-ie-mode-try-reinstalling-microsoft-edge-with-administrator-privileges
+
+https://docs.microsoft.com/en-us/DeployEdge/edge-ie-mode-policies
+
+https://techcommunity.microsoft.com/t5/enterprise/manual-how-to-set-up-ie-mode-internet-explorer-integration-in/m-p/774900
+
+https://docs.microsoft.com/en-gb/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager
+
+https://docs.microsoft.com/en-gb/deployedge/edge-learnmore-neededge
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	InternetExplorerIntegrationLevel -> 1 (REG_DWORD)
+
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main
+
+	NotifyDisableIEOptions -> 2
+
+HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode
+	ShowMessageWhenOpeningSitesInMicrosoftEdge -> 0
+
+	NeedEdgeBrowser -> 4
+
+	SiteList -> XML-sitelist file location (REG_SZ)
+
+	SiteList_DEBUG -> ?
+
+HKLM\SOFTWARE\Microsoft\Internet Explorer\Main\EnterpriseMode
+
+	MSEdgePath -> Path
+
+	MSEdgePath_canary -> Path
+
+	MSEdgePath_dev -> Path
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	InternetExplorerIntegrationSiteList -> XML-sitelist URL file location
+
+HKCU\SOFTWARE\Microsoft\Edge\IEToEdge
+	DisabledPendingAutoUpdateConsent
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	RedirectSitesFromInternetExplorerRedirectMode
+
+//-----------------------------------------------------------------------------
+https://www.winhelponline.com/blog/disable-auto-redirect-unsupported-sites-ie-to-edge
+BHO
+ie_to_edge_bho_64.dll
+
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects
+
+1FD49718-1D00-4B19-AF5F-070AF6D5D54C
+
+//############################################################################# preferences security
+edge://settings/content
+
+clipboard
+mixed_script
+
+//############################################################################# warning
+https://www.bleepingcomputer.com/news/security/chrome-adds-warning-for-when-extensions-take-over-your-internet-connection/
+
+Internet connection is being controlled
+
+//############################################################################# DELETE
+playreadycdm
+swiftshader
+XXX.manifest
+
+%programfiles%\Edge\cache\default\Asset Store
+%programfiles%\edge\cache\default\continuous migration
+%programfiles%\edge\cache\default\edgecoupons
+%programfiles%\edge\cache\default\network
+%programfiles%\edge\cache\default\safe browsing network
+%programfiles%\edge\cache\default\webstorage
+%programfiles%\edge\cache\optimizationguidepredictionmodels
+
+%programfiles%\edge\cache\default\extensionactivitycomp
+%programfiles%\edge\cache\default\extensionactivityedge
+%programfiles%\edge\cache\persisted_first_party_sets.json
+%programfiles%\edge\cache\variations
+
+//############################################################################# App install
+HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+
+%programfiles%\edge\cache\default\web applications
+
+Example:
+
+"%programfiles%\edge\msedge" --user-data-dir="%programfiles%\edge\cache" --profile-directory=Default --app-url=https://web.telegram.org/ --uninstall-app-id=nigookeodlehlnjcpdfifmophdcbjoma
+
+//############################################################################# Download dialog
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	DownloadDirectory -> ${documents}
+
+//############################################################################# unpack resources.pak
+https://github.com/myfreeer/chrome-pak-customizer
+https://textslashplain.com/2022/05/03/chromium-internals-pak-files/
+
+Unpack:
+pak -u "%programfiles%\edge\resources.pak" c:\copy\resources
+pak -u "%programfiles%\edge\msedge_100_percent.pak" c:\copy\100
+pak -u "%programfiles%\edge\msedge_200_percent.pak" c:\copy\200
+pak -u "%programfiles%\edge\locales\de.pak" c:\copy\locales
+
+Pack:
+pak -p c:\copy\resources\pak_index.ini "%programfiles%\edge\resources.pak"
+pak -p c:\copy\100\pak_index.ini "%programfiles%\edge\msedge_100_percent.pak"
+pak -p c:\copy\200\pak_index.ini "%programfiles%\edge\msedge_200_percent.pak"
+pak -p c:\copy\locales\pak_index.ini "%programfiles%\edge\de.pak"
+
+unpack
+unzip files without extension into a separate folder
+batch rename (remove tilde)
+copy to original folder, overwriting the originals
+pack
+
+//############################################################################# Cors -> Access-Control-Allow-Headers
+Allow *:
+
+CORSNonWildcardRequestHeadersSupport
+
+//############################################################################# Image Editor contextmenu
+https://static.edge.microsoftapp.net/consumer/image_editor/beta/20230321a/index.html
+
+//############################################################################# headless mode automation
+"c:\program files\edge\msedge.exe" --headless=new --dump-dom https://developer.chrome.com/ > c:\copy\1.txt
+
+//############################################################################# BROKEN
+New PDF Viewer
+-edge-new-pdf-viewer
+
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	NewPDFReaderEnabled
+
+//----------------------------------------------------------------------------- Requred:
+mspdf.dll
+
+//----------------------------------------------------------------------------- not really required
+mip_core.dll
+
+	msedge.dll -> 39e516b
+
+mip_protection_sdk.dll
+
+	msedge.dll -> d6d53d1
+
+dummy.dll or any other can be used, but must be in current dir, so since libegl.dll is the smallest one, it can be used, replace by: "libegl", replace all unneeded chars by: "/" or overwrite with zeroes
+
+//----------------------------------------------------------------------------- office documents inside Edge
+HKLM\SOFTWARE\Policies\Microsoft\Edge
+	QuickViewOfficeFilesEnabled
+
+connects to ???:
+view.officeapps.live.com
+
+//############################################################################# CRAP
+"c:\program files (x86)\microsoft\edge dev\application\msedge.exe" --type=crashpad-handler "--user-data-dir=c:\users\administrator\appdata\local\microsoft\edge dev\user data" /prefetch:7 --monitor-self-annotation=ptype=crashpad-handler "--database=c:\users\administrator\appdata\local\microsoft\edge dev\user data\crashpad" "--metrics-dir=C:\Users\Administrator\AppData\Local\Microsoft\Edge Dev\User Data" --annotation=IsOfficialBuild=1 --annotation=channel=dev --annotation=chromium-version=90.0.4430.19 "--annotation=exe=c:\program files (x86)\microsoft\edge dev\application\msedge.exe" --annotation=plat=Win64 "--annotation=prod=Microsoft Edge" --annotation=ver=90.0.818.6 --initial-client-data=0xec,0xf0,0xf4,0xc8,0xf8,0x7ffdc0180cb8,0x7ffdc0180cc8,0x7ffdc0180cd8
+
+"%programfiles%\edge\identity_helper.exe" --type=utility --utility-sub-type=winrt_app_id.mojom.WinrtAppIdService --field-trial-handle=1900,191325402015720292,12295490955997723227,131072 --enable-features=WebAssemblyBaseline --disable-features=AutofillShowTypePredictions,msClickOnceFlag --lang=de --service-sandbox-type=none --enable-quic --extensions-on-edge-urls --mojo-platform-channel-handle=4184 /prefetch:8
+
+c:\program files (x86)\microsoft
+c:\programdata\microsoft\edgeupdate
+c:\windows\system32\config\systemprofile\appdata\roaming\microsoft\internet explorer\quick launch
+
+HKLM\SOFTWARE\Classes\MSEdgeHTM
+	AllowSilentDefaultTakeOver
+
+https://www.7-zip.org/download.html
+
+hvsimgr.exe
+
+HKLM\System\CurrentControlSet\Control\Hvsi\EnableSecureEdge
+
+//############################################################################# Portable Edge (Chromium) Updater
+https://github.com/UndertakerBen/PorEdgeUpd/releases
+
+//############################################################################# Uncaught (in promise) DOMException: A network error occurred.
+https://www.gstatic.com/maps/res/CompactLegend-RoadmapSatellite-c314340c7da467261ad0201b1d34b42f
+https://www.google.com/maps/vt/sxforms?v=c314340c7da467261ad0201b1d34b42f
