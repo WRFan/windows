@@ -7,25 +7,25 @@
 ' -disable-webrtc-encryption
 ' -site-per-process
 ' -force-app-mode
+' -disable-prompt-on-repost
+' -no-experiments
+' -restart
+' -disable-domain-action-user-agent-override
+' -enable-automation
+' -enable-experimental-web-platform-features -> selection not visible in devtools
+' -single-process -> DO NOT USE !!!
+' -in-process-gpu -> DO NOT USE !!!
 
 ' -custom-devtools-frontend=file://XXX/devtools_app.html
 
 ' -check-for-update-interval=31536000
-' -simulate-outdated
+' -simulate-outdated <- this one if edge prompts for updates
 ' -simulate-outdated-no-au
 ' -simulate-upgrade
 ' -simulate-critical-update
 
-' config -> Disable site isolation
-
-' -disable-features=GlobalMediaControls,msReadAloud,SSLCommonNameMismatchHandling,RendererCodeIntegrity,msOmniboxFocusRingRoundEmphasize,OmniboxIgnoreIntermediateResults,OmniboxRemoveSuggestionsFromClipboard,ImageSearchSuggestionThumbnail,OmniboxMaxZeroSuggestMatches,CalculateNativeWinOcclusion,msOmniboxHistoryIconInAddressBar,DialMediaRouteProvider,AutofillServerCommunication,CertificateTransparencyComponentUpdater,DestroyProfileOnBrowserClose,msShowSignInIndicator,PaintHolding,Translate,msHistoryHub,ChromeWhatsNewUI,msEdgeSplitWindow,msEdgeHideDiscoverButton,msEdgeMoveAvatarButtonToFrameView,msEdgeReadingView
-
-' -enable-features=msForceBrowserEssentialsToolbarButton,msMoreMenuMovePerformance,msOmniboxBoldSpyglassIcon
-
 ' -blink-settings
 ' -disable-blink-features=
-
-' -disable-extensions
 
 ' -user-agent='AdsBot-Google'
 
@@ -36,19 +36,16 @@
 ' --profile-directory=%programfiles%\edge\cache
 ' --user-data-dir=%programfiles%\edge\cache
 
-' for google maps -> -disable-remote-fonts must be off + fonts.gstatic.com must be accessible
+' -disable-remote-fonts -> for google maps must be off + fonts.gstatic.com must be accessible !!!
 
-' -enable-experimental-web-platform-features -> selection not visible in devtools
+' -disable-extensions-file-access-check -> breaks Extensions "Zugriff auf Daten URLs" !!!
 
-' -enable-automation
+' -single-argument
 
-' -simulate-outdated
+' -disable-gpu
+' -disable-gpu-compositing
 
-' -single-process -> DO NOT USE !!!
-
-' -in-process-gpu -> DO NOT USE !!!
-
-sArgs = "-disable-remote-fonts -process-per-site -shared-array-buffer-unrestricted-access-allowed -disable-extensions-http-throttling -disable-back-forward-cache -disable-background-networking -no-first-run -disable-default-apps -no-default-browser-check -disable-sync -allow-running-insecure-content -allow-legacy-extension-manifests -allow-future-manifest-version -allow-external-pages -disable-image-animation-resync -hide-crash-restore-bubble -ignore-autocomplete-off-autofill -disable-top-sites -disable-cookie-encryption -disable-checking-companion-user-permissions -disable-auto-reload -disable-extensions-file-access-check -disable-signin-scoped-device-id -disable-domain-reliability -disable-usb-keyboard-detect -disable-quick-answers-v2-translation -disable-breakpad -disable-popup-blocking -site-isolation-trial-opt-out -disable-site-isolation-trials -disable-site-isolation-for-policy -disable-crash-reporter -allow-file-access-from-files -test-type -process-per-site -disable-web-security -allow-insecure-localhost -allow-cross-origin-auth-prompt -disable-backing-store-limit -disable-in-process-stack-traces -disable-gpu-watchdog -disable-hang-monitor -disable-ipc-flooding-protection -disable-logging -disable-notifications -disable-speech-api -enable-experimental-cookie-features -enable-experimental-webassembly-features -enable-ftp -enable-network-information-downlink-max -enable-webgl-draft-extensions -javascript-harmony -enable-unsafe-fast-js-calls -allow-no-sandbox-job -ignore-certificate-errors -disable-timeouts-for-profiling -disable-oopr-debug-crash-dump -enable-accessibility-object-model -disable-legacy-window -font-cache-shared-handle -silent-debugger-extension-api -disable-gpu-sandbox -no-sandbox -noerrdialogs -disable-component-update -disable-features=IsolateOrigins,msReadAloud,msShowReadAloudIconInAddressBar,BackForwardCache,msDownloadsHub,msUndersideButton,msHubApps,msEdgeCaretBrowsing,msEdgeCitations"
+sArgs = "-disable-remote-fonts -internet-explorer-integration=none -start-maximized -silent-debugger-extension-api -no-pings -disable-prerender-ntp -process-per-site -shared-array-buffer-unrestricted-access-allowed -disable-extensions-http-throttling -disable-back-forward-cache -disable-background-networking -no-first-run -disable-default-apps -no-default-browser-check -disable-sync -allow-running-insecure-content -allow-legacy-extension-manifests -allow-future-manifest-version -allow-external-pages -disable-image-animation-resync -hide-crash-restore-bubble -ignore-autocomplete-off-autofill -disable-top-sites -disable-cookie-encryption -disable-checking-companion-user-permissions -disable-auto-reload -disable-signin-scoped-device-id -disable-domain-reliability -disable-usb-keyboard-detect -disable-quick-answers-v2-translation -disable-breakpad -disable-popup-blocking -site-isolation-trial-opt-out -disable-site-isolation-trials -disable-site-isolation-for-policy -disable-crash-reporter -allow-file-access-from-files -test-type -process-per-site -disable-web-security -allow-insecure-localhost -allow-cross-origin-auth-prompt -disable-backing-store-limit -disable-in-process-stack-traces -disable-gpu-watchdog -disable-hang-monitor -disable-ipc-flooding-protection -disable-logging -disable-notifications -disable-speech-api -enable-experimental-cookie-features -enable-experimental-webassembly-features -enable-ftp -enable-network-information-downlink-max -enable-webgl-draft-extensions -javascript-harmony -enable-unsafe-fast-js-calls -allow-no-sandbox-job -ignore-certificate-errors -disable-timeouts-for-profiling -disable-oopr-debug-crash-dump -enable-accessibility-object-model -disable-legacy-window -font-cache-shared-handle -silent-debugger-extension-api -disable-gpu-sandbox -no-sandbox -noerrdialogs -disable-component-update -disable-features=IsolateOrigins,msReadAloud,msShowReadAloudIconInAddressBar,BackForwardCache,msDownloadsHub,msUndersideButton,msHubApps,msEdgeCaretBrowsing,msEdgeCitations,GlobalMediaControlsPictureInPicture,msEdgeTabGroups -enable-features=GlobalMediaControlsModernUI"
 
 if wscript.arguments.count > 0 then
 	sArgs = sArgs & " " & chr(34) & wscript.arguments(0) & chr(34)
